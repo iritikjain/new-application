@@ -436,7 +436,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
-  margin-left: 200px;
+  margin-left: 240px;
   border-radius: 0;
   position: relative;
   transition: 0.3s ease-in-out;
@@ -482,3 +482,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
