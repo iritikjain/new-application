@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/IMG2.png";
+import headerImg from "../assets/img/Banner.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
-
 
   return (
     <section className="banner" id="home">
@@ -15,10 +14,10 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Judy`}</h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <div className={isVisible ? "animate__animated animate__fadeIn pt-5" : "" }>
+                <span className="tagline">One Stop Decentralized Solution</span>
+                <h1>{`For Supply Chain Management`}</h1>
+                  <p>Get real-time trackingof products, verifiable information about the origin and quality of products, and secure, tamper-proof records of transactions.</p>
                   <button onClick={() => console.log('connect')}>Let's Get Started !<ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>

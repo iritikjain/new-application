@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../assets/img/SignUp.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -11,7 +11,8 @@ export const Register = () => {
     email: '',
     phone: '',
     password1: '',
-    password2: ''
+    password2: '',
+    type: '',
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Register');
@@ -73,6 +74,8 @@ export const Register = () => {
                   <input type="password" value={formDetails.password1} placeholder="Password" onChange={(e) => onFormUpdate('password1', e.target.value)} required/>
                   
                   <input type="password" value={formDetails.password2} placeholder="Confirm Password" onChange={(e) => onFormUpdate('password2', e.target.value)} required/>
+
+                  <input type="text" value={formDetails.type} placeholder="Role" onChange={(e) => onFormUpdate('type', e.target.value)} required/>
 
                   <button type="submit"><span>{buttonText}</span></button>
 
