@@ -3,8 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/Login.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import {Link} from 'react-router-dom'
 
-export const Login = () => {
+const Login = () => {
   const formInitialDetails = {
     email: '',
     password: ''
@@ -75,8 +76,11 @@ export const Login = () => {
               }
           </TrackVisibility>
           </Col>
+          <p style={{marginLeft: "170px"}}>Already Have An Account? <Link to="/register">Register</Link></p>
         </Row>
       </Container>
     </section>
   )
 }
+
+export default Login;

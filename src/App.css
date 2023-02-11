@@ -343,12 +343,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Login Css ************/
 .register {
+
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 30px 0 30px 0;
+  padding: 90px 0 30px 0;
 }
+
 .register img {
   width: 92%;
 }
+
 .register h2 {
 	font-size: 45px;
 	font-weight: 700;
@@ -417,8 +420,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /*-----------------------------------------*/
 
 .login {
+  height: 100vh;
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 30px 0 30px 0;
+  padding: 60px 0 30px 0;
 }
 .login img {
   width: 92%;
@@ -461,7 +465,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
-  margin-left: 250px;
+  margin-left: 200px;
   border-radius: 0;
   position: relative;
   transition: 0.3s ease-in-out;
