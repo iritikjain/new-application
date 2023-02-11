@@ -76,7 +76,8 @@ const Login = () => {
               }
           </TrackVisibility>
           </Col>
-          <p style={{marginLeft: "170px"}}>Already Have An Account? <Link to="/register">Register</Link></p>
+          <p style={{marginLeft: "200px", paddingTop: "0px"}}>Not Have An Account? <Link to="/register" style={{color: "white"}}>Register</Link></p>
+          <p style={{marginLeft: "205px", paddingTop: "0px"}}>Forget Password? <Link to="/" style={{color: "white"}}>Click Here !</Link></p>
         </Row>
       </Container>
     </section>

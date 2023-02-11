@@ -4,6 +4,7 @@ import headerImg from "../assets/img/Log.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { HashLink } from 'react-router-hash-link';
 
 const Banner = () => {
   return (
@@ -17,7 +18,9 @@ const Banner = () => {
                 <span className="tagline">One Stop Decentralized Solution</span>
                 <h1>{`For Supply Chain Management`}</h1>
                   <p>Get real-time product tracking, dependable product origin and quality information, and safe, impenetrable transaction records.</p>
-                  <button onClick={() => console.log('connect')}>Let's Get Started !<ArrowRightCircle size={25} /></button>
+                  <HashLink to='/login'>
+                   <button onClick={() => console.log('connect')}>Let's Get Started !<ArrowRightCircle size={25}/></button>
+                  </HashLink>
               </div>}
             </TrackVisibility>
           </Col>

@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import contactImg from '../assets/img/SignUp.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import {Link} from 'react-router-dom'
 
 const Register = () => {
   const formInitialDetails = {
@@ -153,6 +154,7 @@ const Register = () => {
                       </Col>
                     )}
                   </form>
+                  <p style={{marginLeft: "190px"}} className={'pt-4'}>Already Have An Account? <Link to="/login" style={{color: "white"}}>Login</Link></p>
                 </div>
               )}
             </TrackVisibility>
