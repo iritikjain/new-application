@@ -24,19 +24,24 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Logging In...");
-    let response = await fetch("", {
+    let response = await fetch("http://localhost:5000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
-      body: JSON.stringify(formDetails),
+      body: JSON.stringify({
+        emailId: formDetails.email,
+        password: formDetails.password
+      }),
     });
     setButtonText("Login");
     let result = await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code === 200) {
+    if (result.code !== 400) {
+      // Redirect pending
       setStatus({ succes: true, message: 'Logged In Successfully !'});
     } else {
+      console.log(result.code)
       setStatus({ succes: false, message: 'Something Went Wrong, Please Try Again Later.'});
     }
   };

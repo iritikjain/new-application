@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import contactImg from '../assets/img/SignUp.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   const formInitialDetails = {
@@ -29,23 +29,29 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText('Registering...');
-    let response = await fetch('', {
+    console.log(formDetails);
+    let response = await fetch('http://localhost:5000/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
       },
-      body: JSON.stringify(formDetails),
+      body: JSON.stringify({
+        firstname: formDetails.firstName,
+        lastname: formDetails.lastName,
+        emailId: formDetails.email,
+        phoneNumber: formDetails.phone,
+        passcode: formDetails.password1,
+        userType: formDetails.type,
+      }),
     });
     setButtonText('Register');
     let result = await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({ succes: true, message: 'Registered Successfully !' });
+    if (result.code === 201) {
+      // redirect left
+      alert("Registered Successfully")
     } else {
-      setStatus({
-        succes: false,
-        message: 'Something Went Wrong, Please Try Again Later.',
-      });
+      alert("'Something Went Wrong, Please Try Again Later.'")
     }
   };
 
@@ -154,7 +160,12 @@ const Register = () => {
                       </Col>
                     )}
                   </form>
-                  <p style={{marginLeft: "190px"}} className={'pt-4'}>Already Have An Account? <Link to="/login" style={{color: "white"}}>Login</Link></p>
+                  <p style={{ marginLeft: '190px' }} className={'pt-4'}>
+                    Already Have An Account?{' '}
+                    <Link to='/login' style={{ color: 'white' }}>
+                      Login
+                    </Link>
+                  </p>
                 </div>
               )}
             </TrackVisibility>
